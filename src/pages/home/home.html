@@ -1,14 +1,20 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Todo List
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addTask()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-list>
+    <ion-item *ngFor="let task of tasks | async" (click)="showOptions(task.id, task.descricao)">
+      {{ task.descricao }}
+    </ion-item>
+  </ion-list>
 </ion-content>
