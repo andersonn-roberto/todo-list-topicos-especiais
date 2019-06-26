@@ -32,7 +32,7 @@ export class HomePage {
       buttons: [
         {
           text: 'Cancelar',
-          handler: data => {
+          handler: () => {
             console.log('Cancelar acionado');
           }
         }, {
@@ -96,7 +96,7 @@ export class HomePage {
       buttons: [
         {
           text: 'Cancelar',
-          handler: data => {
+          handler: () => {
             console.log('Cancelar clicado.');
           }
         }, {
